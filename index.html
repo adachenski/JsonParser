@@ -1,0 +1,53 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div id="byte_range"></div>
+    <div class="container">
+        <h1>Veriflow Json to Html Parser</h1>
+       
+        <div class="row">
+            <div class="col-xs-3">
+                <input type="file" id="files" name="file" />
+            </div>
+            <div class="col-xs-7">
+                <span class="readBytesButtons">
+                    <!-- <button data-startbyte="0" data-endbyte="4">1-5</button>
+                        <button data-startbyte="5" data-endbyte="14">6-15</button>
+                        <button data-startbyte="6" data-endbyte="7">7-8</button> -->
+                    <button>Parse</button>
+                </span>
+            </div>
+            <div class="col-xs-2">version: 1.0</div>
+        </div>
+
+        <h3>Table</h3>
+        <table class="row">
+            <tr>
+                <th class="col col-xs-1">id</th>
+                <th class="col col-xs-1">disabled</th>
+                <th class="col col-xs-1">name</th>
+                <th class="col col-xs-7">description</th>
+                <th class="col col-xs-1">group</th>
+                <th class="col col-xs-1">parameters</th>
+            </tr>
+        </table>
+
+    </div>
+</body>
+
+</html>
