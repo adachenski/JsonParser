@@ -6,14 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="index.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+<script src="index.js"></script>
 </head>
 
 <body>
+        
+              
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      ...
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
     <div id="byte_range"></div>
     <div class="container">
@@ -35,19 +55,23 @@
         </div>
 
         <h3>Table</h3>
-        <table class="row">
-            <tr id="nas">
-                <th class="col-xs-1">id</th>
-                <th class="col-xs-1">disabled</th>
-                <th class="col-xs-1">name</th>
-                <th class="col-xs-7">description</th>
-                <th class="col-xs-1">group</th>
-                <th class="col-xs-1">parameters</th>
-            </tr>
-     
-        </table>
+        <div id="main" >
+           <div id="nasko" class="row"> 
+                <!-- <div class="nas1 col-xs-1">id</div>
+                <div class="nas2 col-xs-1">disabled</div>
+                <div class="nas3 col-xs-1">name</div>
+                <div class="nas4 col-xs-7">description</div>
+                <div class="nas5 col-xs-1">group</div>
+                <div class="nas6 col-xs-1">parameters</div> -->
+            </div>
+        </div>
 
     </div>
 </body>
+
+<script>
+
+
+</script>
 
 </html>
