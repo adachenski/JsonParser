@@ -65,7 +65,7 @@ $(document).ready(function () {
                 id: 'param_' + i
             });
             card = $('<div/>').attr("class","row");
-            firstRowParams = $('<div/>');
+            firstRowParams = $('<div/>').addClass("col-1");
             var par = json[i].parameters;
             var count = Object.keys(par).length;
             anchor = $('<a/>')
@@ -75,13 +75,14 @@ $(document).ready(function () {
                 .attr('aria-expanded', 'false')
                 .attr('data-toggle', 'collapse')
                 .attr('aria-controls', '#param_' + i)
-                .attr('class', 'btn btn-primary')
-                .text(count);
+                .text("Params: "+count)
+                .css("margin","5px 5px 5px 0px")
+                .addClass("btn btn-primary btn-sm");
 
             row2TD = $('<div/>',{
                 class: 'row card card-body'
             });
-            console.log(json[i].parameters);
+            //console.log(Object.keys(json[i])[6]);
             tr = $('<div class="row" style="border:1px solid black"></div>');
             tr.append("<div class='col-1'" + tableCss + ">" + json[i].id + "</div>");
             tr.append("<div class='col-1'" + tableCss + ">" + json[i].disabled + "</div>");
@@ -95,26 +96,23 @@ $(document).ready(function () {
             // paramTable(param);
             var finalObj = json[i].parameters;
             for (key in finalObj){
-                card2 = $('<div/>');
+              //  card2 = $('<div/>');
                 row3TD = $('<div/>',{
                     class: 'row card card-body'
                 });
                 var innerAncor = $('<div/>')
-                // .attr('data-target', '#params_' + key)
-                // .attr('data-toggle', 'modal')
-                // .attr('class', 'btn btn-primary')
-                .text(key);
-
+                .text(key).css("background-color","lightgray");
+           
                 row2Parms = $('<div/>').attr('class','col-3').html(innerAncor);
-
-                card.append(row2Parms);
-               
                var totlaObj = finalObj[key]
                for(totalKey in totlaObj){
-                finalRow = $('<div/>').attr('class','col-xs-2').text(totalKey+" : "+totlaObj[totalKey]);
-                card2.append(finalRow);
+                //finalRow = $('<div/>').attr('class','col-xs-2').text(totalKey+" : "+totlaObj[totalKey]);
+                //card2.append(finalRow);
+                 var thirdObj = $('<div/>').html("<b>"+totalKey+"</b> : "+totlaObj[totalKey]);
+                 row2Parms.append(thirdObj);
                   // console.log(totalKey+" : "+totlaObj[totalKey])
                }
+               card.append(row2Parms);
               
             }
             row2TD.append(card);
@@ -126,13 +124,5 @@ $(document).ready(function () {
             $('#main').append(tr2);
         }
     };
-  
-    // paramTable(param);
-    // var paramsAttributes =  (function(){
-    //     console.log(param.length)
-    //     for (var i = 0; i < param.length; i+=1){
-    //         console.log(param[i])
-    //     }
-    // })();
 
 });
